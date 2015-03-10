@@ -1,0 +1,99 @@
+\section{Data uniformity} \label{sec:data}
+
+LAGO has been developing two main initiatives to deploy a network of curated data repositories:
+
+\begin{enumerate}
+  \item to preserve, curate and share the data registered by the large aperture
+WCD array, now through a data repository (DR) and in the near future across a
+network of DR
+
+ \item to generate a toolkit of scripts and algorithms to detect
+the proper operation of the detector. This toolkit will be part of the next
+generation of firmware and will allows the system to reconfigure some of its
+parameters in order to minimize some of diagnosed malfunctioning.  
+
+ \item to offer a computational infrastructure that allows the collaboration
+members to analyze the curated data efficiently
+
+\end{enumerate} 
+
+These initiatives aim to pave the way to openly share the data
+recorded with any other domain disciplines.
+
+The reasons for preserving data derive from the fact that observations,
+knowledge and understanding are cumulative. Data arise either from measurements
+(observational or experimental data), simulated results (synthetic data
+computed with mathematical models) or historical records (historical data).
+Metadata can facilitate \cite{MichenerEtal1997}:
+
+\begin{itemize}
+  \item data identification and acquisition for a given
+      subject, for a specific period of time or geographic
+      location;
+  \item automatic analysis and data modeling;
+  \item the inclusion of semantic knowledge elements
+      associated with the data.
+\end{itemize}
+
+
+LAGO developed a prototype of  data repository, \texttt{LAGOData}
+\cite{TorresEtAl2011} as a part of a more ambitious project,
+\texttt{LAGOVirtual}\cite{CamachoEtal2009}, oriented to develop a working
+environment to have access and to analyzed the data recorded in all LAGO Sites.
+In \texttt{LAGOData}  repository the data are classified  into three types:
+instrument calibration data, WCD data sets and simulated data sets. In a near
+future this repository will also preserve papers, thesis, Labs Notes and
+reports related with the project.
+
+Each data file is tagged by a metadata set specifically adapted to LAGO. The
+existence and implementation of a scientific metadata standard model will allow
+an uniform access to data for all the members of LAGO colaboration, the
+interoperability between scientific information systems and also will
+contribute to the data preservation and its usability in time. The metadata
+model we propose for \texttt{LAGOData} is an adaptation of the model raised for
+the Council for the Central Laboratory of the Research Councils \cite{Sufi2004}
+
+We have developed a prototype of the data repository for the LAGO collaboration
+adapting the system  DSpace  \cite{SmithEtal2003}, an open source software that
+enables open sharing of many types of content, generally used for institutional
+repositories.  Dspace can expose the data and metadata through the Open
+Archives Initiatives Protocol for Metadata
+Harvesting\footnote{\href{http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm}{http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm}}
+(\cite{VanSopelEtal2004}) . This protocol is used  by external systems to
+collect the data and metadata and create services of agregated value like
+meta-searchers. Also offers the data through Really Simple Syndication
+channels, RSS, which is available at all levels in the structure of the
+repository. These channels are a simple mechanism to show the contents recently
+submitted. The detailed description of the implementation of this data
+repository based on DSpace can be found in \cite{TorresEtAl2011} and an
+interesting survey of a hundred of DR can be found in
+\cite{MarcialHemminger2010}.
+
+We expect to release a second version of \texttt{LAGOData} which will have an
+implementation of the SWORD ( for \textit{Simple Web-service Offering
+Repository Deposit}  ) protocol which became a way to address the need for a
+standardised deposit interface to digital repositories
+\cite{LewisDeCastroJones2012}. With this implementation  we will be not only
+able to synchronize a network of DR across all LAGO site, but also to
+automatically stamp a basic metada each data set collected at each WCD of the
+LAGO Collaboration.
+ 
+ Additionally, LAGO the electronics is very sensible to atmospheric
+electromagnetic disturbances. Typically thunderstorms, that generate severe
+change in pressure, temperature  and other weather electric disturbances which
+can be associated with antipulses or high variations in voltage. These ghost
+signals produced by intense variation on the recording whether variables (or
+environmental electric fields) have to be excluded  from curated data sets. To
+identify and remove ghost signals on the curated data sets we have performed an
+sliding time window analysis looking for signals having 3$\sigma$ deviations
+from the average. The sliding window analysis, is an standard strategy where
+statistical parameters are calculated for a small frame, or window, of the
+data. The window incrementally advances across the surveyed region and, at each
+new position, an the new statistical indicators are calculated. In our case, we
+have selected $60s$ as a frame window, with a sliding increment of $0.2s$. The
+analysis was performed over all data files, from Sierra Negra and Chacaltaya
+LAGO sites, that passed the above criterium of the 200 GPS clock marks. We had
+found and remove two ghost signals produced by a significant variations of the
+electronics baseline. Those data sets that comply with both above criteria (200
+clock marks and no ghost signals) are called Good Run List and are available at
+the LAGO DR \cite{Sarmiento2012}.

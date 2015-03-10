@@ -1,0 +1,8 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Detalles Detector}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Ubicaci\IeC {\'o}n Detector}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2} Tanque de pl\IeC {\'a}stico}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Electr\IeC {\'o}nica}{1}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Fotomultiplicador}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Pulso Obtenido con el Fotomultiplicador Peque\IeC {\~n}o}{3}{subsection.1.5}
+\contentsline {section}{\numberline {2}Bibliograf\'ia}{4}{section.2}

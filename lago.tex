@@ -1,0 +1,52 @@
+\pdfoutput=1 % only if pdf/png/jpg images are used
+\documentclass{JINST}
+\let\ifpdf\relax% Esto lo agrego por el warning que me tira al compilar por \ifpdf
+\hyphenation{tem-pe-ra-tu-re}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multirow}
+\bibliographystyle{JHEP}
+
+\title{The Latin American Giant Observatory: a Very Long Baseline Array of Ground Based Astroparticles Detectors}
+
+\author{
+	The LAGO Collaboration\thanks{Corresponding author.}\\
+	web: \href{http://lagoproject.org}{lagoproject.org}\\
+	email: \email{lago-pi@lagoproject.org}
+}
+
+\abstract{
+The LAGO (Latin American Giant Observatory) project, aims at the detection of the
+highest energy component of Gamma Ray Bursts. It consists in a wide network of
+water Cherenkov detectors (WCDs) located at several sites in eight Latin
+American countries. Recently it has been shown that WCDs can be used to study
+the solar modulation of galactic cosmic rays and other transient effects, by
+measuring the variations of the flux of secondary particles at ground level.
+Long-term modulation and transient events can be characterized by using the
+LAGO detection network, as it spans over a big area with different sites at
+different latitudes, longitudes and geomagnetic rigidity cut-offs. In this work
+the Observatory is presented with all its sites, and also the
+capabilities to complement measurements of solar activity from ground level are
+described. 
+
+}
+\keywords{Space Weather, Gamma Ray Bursts, Water Cherenkov Detector}
+
+\begin{document}
+\include{introduction}
+\include{science}
+\include{detector}
+\include{sites}
+\include{sites/argentina-sites}  %1
+\include{sites/brazil-sites}     %2
+\include{sites/bolivia-sites}    %3
+\include{sites/colombia-sites}   %4
+\include{sites/ecuador-sites}    %5
+\include{sites/guatemala-sites}  %6
+\include{sites/mexico-sites}     %7
+\include{sites/peru-sites}       %8
+\include{sites/venezuela-sites}  %9
+\include{data}
+\include{concs-aknow}
+\bibliography{biblio}
+\end{document}
